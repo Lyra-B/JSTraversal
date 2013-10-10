@@ -38,12 +38,19 @@
     </x3d>
 
     <script type="text/javascript">
+      Array.prototype.random = function() {
+        return this[Math.floor(Math.random() * this.length)];
+      };
+
+      var choices = ['box', 'cone', 'cylinder'];
+
       // Hello I'm Javascript
       function createShape() {
         var shape = document.createElement("shape");
         var appearance = document.createElement("appearance");
         var material = document.createElement("material");
-        var box = document.createElement("box");
+        var choice = choices.random();
+        var box = document.createElement(choice);
         appearance.appendChild(material);
         shape.appendChild(appearance);
         shape.appendChild(box);
