@@ -13,7 +13,7 @@
 
    <x3d xmlns="http://www.x3dom.org/x3dom" showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px" altImg="helloX3D-alt.png">
     <scene>
-      <viewpoint position='0 0 10' ></viewpoint>
+      <viewpoint position='10 10 50' ></viewpoint>
       <scene id="scene" render="true" pickmode="idBuf" dopickpass="true" sorttrans="true" frustumculling="true">
 
        <!--  <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
@@ -38,23 +38,38 @@
     </x3d>
 
     <script type="text/javascript">
-      Array.prototype.random = function() {
-        return this[Math.floor(Math.random() * this.length)];
+      function randomItem(choices) {
+         return choices[Math.floor(Math.random() * choices.length)];
       };
 
       var choices = ['box', 'cone', 'cylinder'];
+
+      function randomNumber() {
+        return parseInt(Math.random() * 20);
+      }
 
       // Hello I'm Javascript
       function createShape() {
         var shape = document.createElement("shape");
         var appearance = document.createElement("appearance");
         var material = document.createElement("material");
-        var choice = choices.random();
+        var choice = randomItem(choices);
         var box = document.createElement(choice);
+
+        // Create a transform element to nest the shape inside
+        var transform = document.createElement("transform");
+        var translation = "x y z".
+        replace("x", randomNumber()).
+        replace("y", randomNumber()).
+        replace("z", randomNumber());
+        transform.setAttribute("translation", translation);
+
         appearance.appendChild(material);
         shape.appendChild(appearance);
         shape.appendChild(box);
-        return shape;
+        transform.appendChild(shape);
+
+        return transform;
       }
 
       function addShape() {
