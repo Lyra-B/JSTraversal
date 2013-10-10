@@ -1,0 +1,46 @@
+body {
+	font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+}
+
+.drop-down {
+	background-color: #EEE;
+	color: #333;
+	width: 200px;
+	padding: 10px;
+	border-radius: 8px;
+	line-height: 26px;
+}
+
+.drop-down dt {
+	font-size: 1.1em;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.drop-down dd {
+	background-color: #FFF;
+	border: 1px solid #EEE;
+	margin: 0;
+}
+
+.drop-down ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.drop-down li {
+	cursor: pointer;
+	border-bottom: 1px solid #EEE;
+	padding: 8px;
+}
+
+.arrow-icon {
+	background: url("../img/glyphicons_free/glyphicons/png/glyphicons_220_play_button.png") no-repeat left top transparent;
+	display: block;
+	width: 26px;
+	height: 26px;
+	text-indent: -9999px;
+	float: right;
+}
+
