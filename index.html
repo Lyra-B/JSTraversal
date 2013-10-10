@@ -37,10 +37,22 @@
     </scene>
   </x3d>
 
-  <script type="text/javascript">
-    // Hello I'm Javascript
-  </script>
+   <script type="text/javascript">
+     // Hello I'm Javascript
+     var shape = document.createElement("shape");
+     var appearance = document.createElement("appearance");
+     var material = document.createElement("material");
+     var box = document.createElement("box");
+     appearance.appendChild(material);
+     shape.appendChild(appearance);
+     shape.appendChild(box);
 
-  <button onclick="">Click Me!</button>
+     var scene = document.getElementById("scene");
+     scene.appendChild(shape);
+
+
+   </script>
+
+   <button onclick="">Click me!</button>
 </body>
 </html>
