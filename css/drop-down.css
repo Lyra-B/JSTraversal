@@ -38,12 +38,41 @@ body {
 	display: none;
 }
 
-.arrow-icon {
-	background: url("../img/glyphicons_free/glyphicons/png/glyphicons_220_play_button.png") no-repeat left top transparent;
+.icon {
 	display: block;
 	width: 26px;
 	height: 26px;
 	text-indent: -9999px;
+	cursor: pointer;
+}
+
+.arrow-icon {
+	background: url("../img/glyphicons_free/glyphicons/png/glyphicons_220_play_button.png") no-repeat left top transparent;
 	float: right;
 }
 
+#modal {
+	width: 100%;
+	height: 100%;
+	background: rgba(2, 2, 2, 0.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.modal-content {
+	background: white;
+	padding: 20px;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+.close {
+	float: right;
+}
+
+.close-icon {
+	background: url("../img/glyphicons_free/glyphicons/png/glyphicons_197_remove.png") no-repeat left top transparent;
+}
