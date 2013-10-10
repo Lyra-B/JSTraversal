@@ -39,20 +39,24 @@
 
    <script type="text/javascript">
      // Hello I'm Javascript
-     var shape = document.createElement("shape");
-     var appearance = document.createElement("appearance");
-     var material = document.createElement("material");
-     var box = document.createElement("box");
-     appearance.appendChild(material);
-     shape.appendChild(appearance);
-     shape.appendChild(box);
+     function createShape() {
+       var shape = document.createElement("shape");
+       var appearance = document.createElement("appearance");
+       var material = document.createElement("material");
+       var box = document.createElement("box");
+       appearance.appendChild(material);
+       shape.appendChild(appearance);
+       shape.appendChild(box);
+       return shape;
+     }
 
-     var scene = document.getElementById("scene");
-     scene.appendChild(shape);
-
+     function addShape() {
+      var scene = document.getElementById("scene");
+      scene.appendChild(createShape());
+     };
 
    </script>
 
-   <button onclick="">Click me!</button>
+   <button onclick="addShape()">Click me!</button>
 </body>
 </html>
