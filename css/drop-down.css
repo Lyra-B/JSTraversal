@@ -14,13 +14,12 @@ body {
 .drop-down dt {
 	font-size: 1.1em;
 	cursor: pointer;
-	margin-bottom: 10px;
 }
 
 .drop-down dd {
 	background-color: #FFF;
 	border: 1px solid #EEE;
-	margin: 0;
+	margin: 10px 0;
 }
 
 .drop-down ul {
@@ -33,6 +32,10 @@ body {
 	cursor: pointer;
 	border-bottom: 1px solid #EEE;
 	padding: 8px;
+}
+
+.sub-menu {
+	display: none;
 }
 
 .arrow-icon {

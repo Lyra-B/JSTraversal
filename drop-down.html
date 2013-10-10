@@ -9,7 +9,7 @@
 	<h1>Drop Down</h1>
 
 	<dl class="drop-down">
-		<dt>Dropdown <b class="icon arrow-icon">Arrow</b></dt>
+		<dt onclick="toggleSubMenu(this)">Dropdown <b class="icon arrow-icon">Arrow</b></dt>
 		<dd class="sub-menu">
 			<ul>
 				<li>Option 1</li>
@@ -20,6 +20,16 @@
 			</ul>
 		</dd>
 	</dl>
+
+	<script type="text/javascript">
+		function toggleSubMenu(dt) {
+			var dd = dt.nextElementSibling;
+
+			// Toggle the class attribute of the dd element
+			var c = dd.getAttribute("class") === 'sub-menu' ? '' : 'sub-menu';
+			dd.setAttribute("class", c);
+		}
+	</script>
 
 </body>
 
