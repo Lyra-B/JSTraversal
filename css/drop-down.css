@@ -80,3 +80,40 @@ body {
 .close-icon {
 	background: url("../img/glyphicons_free/glyphicons/png/glyphicons_197_remove.png") no-repeat left top transparent;
 }
+
+#carousel {
+	width: 400px;
+	height: 300px;
+	overflow: hidden;
+}
+
+#carousel-content {
+	position: relative;
+	width: 1200px;
+}
+
+#carousel-content ul {
+	list-style-type: none;
+	padding:0;
+	margin:0;
+}
+
+#carousel-content li {
+	/*display: inline-block;*/
+	float: left;
+	width: 400px;
+	height: 300px;
+	margin: 0px;
+}
+
+.item-1 {
+	background-color: blue;
+}
+
+.item-2 {
+	background-color: yellow;
+}
+
+.item-3 {
+	background-color: red;
+}
