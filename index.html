@@ -39,21 +39,41 @@
 
   <script type="text/javascript">
     // Hello I'm Javascript
-    var shape = document.createElement("shape")
-    var appearance = document.createElement("appearance")
-    var material = document.createElement("material")
-    var box = document.createElement("box")
+    var addShape = function(shapes){
+      switch(shapes){
+        case 'foo':
+        type = document.createElement("box")
+        break;
+        case 'bar':
+        type = document.createElement("sphere")
+        break;
+        case 'fuzz':
+        type = document.createElement("cone")
+        break;
 
-    shape.appendChild(appearance)
-    appearance.appendChild(material)
-    shape.appendChild(box)
+      }
+      var shape = document.createElement("shape")
+      var appearance = document.createElement("appearance")
+      var material = document.createElement("material")
+      var transform = document.createElement("transform")
 
-    document.getElementById("scene").appendChild(shape)
+      shape.appendChild(appearance)
+      appearance.appendChild(material)
+      shape.appendChild(type)
+
+      transform.setAttribute("translation", '0 3 0')
+
+      transform.appendChild(shape)
+      document.getElementById("scene").appendChild(transform)
+    }
+
+    // document.getElementById().appendChild(shape)
+
 
     // document.getElementById("scene").setAttribute("diffuseColor", '0.603 0.894 0.6')
 
   </script>
 
-  <button onclick="">Click Me!</button>
+  <button onclick="addShape('bar')">Click Me!</button>
 </body>
 </html>
