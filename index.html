@@ -57,23 +57,26 @@
       var material = document.createElement("material")
       var transform = document.createElement("transform")
 
+      var randPos = Math.floor(Math.random()*3)
+
       shape.appendChild(appearance)
       appearance.appendChild(material)
       shape.appendChild(type)
 
-      transform.setAttribute("translation", '0 3 0')
+      transform.setAttribute("translation", (randPos.toString(); + " " + randPos.toString(); + " " + randPos.toString();))
 
       transform.appendChild(shape)
       document.getElementById("scene").appendChild(transform)
     }
 
     // document.getElementById().appendChild(shape)
-
+    // var args = ['foo', 'bar', 'fuzz']
+    // var randArgs = args[Math.floor(Math.random()*args.length)]
 
     // document.getElementById("scene").setAttribute("diffuseColor", '0.603 0.894 0.6')
 
   </script>
 
-  <button onclick="addShape('bar')">Click Me!</button>
+  <button onclick="addShape('cone')">Click Me!</button>
 </body>
 </html>
