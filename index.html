@@ -63,20 +63,24 @@
       appearance.appendChild(material)
       shape.appendChild(type)
 
-      transform.setAttribute("translation", (randPos.toString(); + " " + randPos.toString(); + " " + randPos.toString();))
+      transform.setAttribute("translation", (0,3,0))
 
       transform.appendChild(shape)
       document.getElementById("scene").appendChild(transform)
     }
 
     // document.getElementById().appendChild(shape)
-    // var args = ['foo', 'bar', 'fuzz']
-    // var randArgs = args[Math.floor(Math.random()*args.length)]
+    var args = ['foo', 'bar', 'fuzz']
+    var randArgs = function(array) {
+    array[Math.floor(Math.random()*array.length)]
+    }
 
     // document.getElementById("scene").setAttribute("diffuseColor", '0.603 0.894 0.6')
 
   </script>
 
-  <button onclick="addShape('cone')">Click Me!</button>
+  <button onclick="addShape(randArgs(args))">Click Me!</button>
 </body>
 </html>
+
+<!-- '' + randPos.toString(); + " " + randPos.toString(); + " " + randPos.toString(); -->
