@@ -1,85 +1,29 @@
 <!DOCTYPE html >
 <html >
 <head>
-  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <title>Hello World</title>
-  <script type="text/javascript" src="x3dom.js"></script>
+  <title> Modal Example </title>
+  <link href="css/reset.css" type="text/css" rel="stylesheet">
+  <link href="css/modal.css" type="text/css" rel="stylesheet">
 </head>
 
-<body style="text-align: center">
+<body>
+  <main>
+    <h1></h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+    </p>
 
- <h1>Hello 3D</h1>
+    <a class="modal-show" href="#modal-show">Show Modal</a>
 
- <x3d xmlns="http://www.x3dom.org/x3dom" showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px" altImg="helloX3D-alt.png">
-  <scene>
-    <viewpoint position='0 0 10' ></viewpoint>
-    <scene id="scene" render="true" pickmode="idBuf" dopickpass="true" sorttrans="true" frustumculling="true">
-
-     <!--  <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
-        <appearance>
-          <material diffuseColor='0.603 0.894 0.909' ></material>
-        </appearance>
-        <box def="box" solid="true" ccw="true" usegeocache="true" size="5,5,5">
-
-        </box>
-      </shape> -->
-
-      <!-- <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
-
-        <appearance>
-          <material diffuseColor='0.603 0.894 0.909' ></material>
-        </appearance>
-        <cone solid="true" ccw="true" usegeocache="true" bottomradius="1" height="2" bottom="true" subdivision="32" side="true">
-
-        </cone>
-      </shape> -->
-    </scene>
-  </x3d>
-
-  <script type="text/javascript">
-    // Hello I'm Javascript
-    var addShape = function(shapes){
-      switch(shapes){
-        case 'foo':
-        type = document.createElement("box")
-        break;
-        case 'bar':
-        type = document.createElement("sphere")
-        break;
-        case 'fuzz':
-        type = document.createElement("cone")
-        break;
-
-      }
-      var shape = document.createElement("shape")
-      var appearance = document.createElement("appearance")
-      var material = document.createElement("material")
-      var transform = document.createElement("transform")
-
-      var randPos = Math.floor(Math.random()*3)
-
-      shape.appendChild(appearance)
-      appearance.appendChild(material)
-      shape.appendChild(type)
-
-      transform.setAttribute("translation", (0,3,0))
-
-      transform.appendChild(shape)
-      document.getElementById("scene").appendChild(transform)
-    }
-
-    // document.getElementById().appendChild(shape)
-    var args = ['foo', 'bar', 'fuzz']
-    var randArgs = function(array) {
-    array[Math.floor(Math.random()*array.length)]
-    }
-
-    // document.getElementById("scene").setAttribute("diffuseColor", '0.603 0.894 0.6')
-
-  </script>
-
-  <button onclick="addShape(randArgs(args))">Click Me!</button>
+  </main>
+  <div class="modal-container">
+    <div class="modal">
+      <h3>My amazing Modal</h3>
+      <p>Are you sure you want to continue?</p>
+      <button>OK</button>
+    </div>
+  </div>
 </body>
 </html>
 
