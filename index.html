@@ -68,16 +68,16 @@
     }
 
     // document.getElementById().appendChild(shape)
-    var args = ['foo', 'bar', 'fuzz'];
-    var randArgs = function(array) {
-    array[Math.floor(Math.random()*array.length)]
-    };
+    // var args = ['foo', 'bar', 'fuzz'];
+    // var randArgs = function(array) {
+    // array[Math.floor(Math.random()*array.length)]
+    // };
 
     // document.getElementById("scene").setAttribute("diffuseColor", '0.603 0.894 0.6')
 
   </script>
 
-  <button onclick="addShape('foo')">Click Me!</button>
+  <button onclick="addShape(['foo', 'bar', 'fuzz'][Math.floor(Math.random()*['foo', 'bar', 'fuzz'].length)])">Click Me!</button>
 </body>
 </html>
 
