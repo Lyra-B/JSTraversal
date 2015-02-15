@@ -50,36 +50,34 @@
         case 'fuzz':
         type = document.createElement("cone")
         break;
-
       }
-      var shape = document.createElement("shape")
-      var appearance = document.createElement("appearance")
-      var material = document.createElement("material")
-      var transform = document.createElement("transform")
 
-      var randPos = Math.floor(Math.random()*3)
+      var shape = document.createElement("shape");
+      var appearance = document.createElement("appearance");
+      var material = document.createElement("material");
+      var transform = document.createElement("transform");
 
-      shape.appendChild(appearance)
-      appearance.appendChild(material)
-      shape.appendChild(type)
+      shape.appendChild(appearance);
+      appearance.appendChild(material);
+      shape.appendChild(type);
 
-      transform.setAttribute("translation", (0,3,0))
+      transform.setAttribute("translation",((Math.floor(Math.random()*3)).toString()+", "+(Math.floor(Math.random()*3)).toString()+", "+(Math.floor(Math.random()*3)).toString()));
 
-      transform.appendChild(shape)
-      document.getElementById("scene").appendChild(transform)
+      transform.appendChild(shape);
+      document.getElementById("scene").appendChild(transform);
     }
 
     // document.getElementById().appendChild(shape)
-    var args = ['foo', 'bar', 'fuzz']
+    var args = ['foo', 'bar', 'fuzz'];
     var randArgs = function(array) {
     array[Math.floor(Math.random()*array.length)]
-    }
+    };
 
     // document.getElementById("scene").setAttribute("diffuseColor", '0.603 0.894 0.6')
 
   </script>
 
-  <button onclick="addShape(randArgs(args))">Click Me!</button>
+  <button onclick="addShape('foo')">Click Me!</button>
 </body>
 </html>
 
