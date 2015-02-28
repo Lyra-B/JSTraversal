@@ -5,7 +5,7 @@
   position:relative;
 }
 
-img {
+.image {
   display:inline-block;
 }
 
@@ -21,7 +21,6 @@ img {
 #left{
   top:69px;
   position:absolute;
-  /*float:left;*/
   height:30px;
   width:30px;
   border-radius:30px;

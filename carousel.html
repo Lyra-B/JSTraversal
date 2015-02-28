@@ -11,11 +11,44 @@
     <button id="left">
       <
     </button>
-    <img src="carousel_images/london1.jpeg", alt ="Big Ben"/>
-    <img src="carousel_images/london2.jpeg", alt ="City View"/>
-    <img src="carousel_images/london3.jpeg", alt ="Eye of London"/>
+    <img class="image" src="carousel_images/london1.jpeg", alt ="Big Ben"/>
+    <img class="image" src="carousel_images/london2.jpeg", alt ="City View"/>
+    <img class="image" src="carousel_images/london3.jpeg", alt ="Eye of London"/>
   </div>
   <script type="text/javascript">
+  function Carousel() {
+    this.images = document.getElementsByClassName("image");
+    this.right = document.getElementById("right");
+    this.left = document.getElementById("left");
+
+    this.right.onclick = function() {
+      alert("right");
+    };
+
+    this.left.onclick = function() {
+      alert("left")
+    };
+  }
+
+  var carousel = new Carousel();
+
+  // function getPosition(direction) {
+  //   direction.onclick{
+  //     if (direction == this.right) {
+
+  //     }
+  //     else if (direction == this.left) {
+
+  //     }
+  //   }
+  // }
+
+
+
+  // var carousel = new Carousel();
+  //carousel.right.onclick(){carousel.getPosition(right)}
+  //carousel.left.onclick(){carousel.getPosition(right)}
+  // carousel.getPosition()
 
   </script>
 
