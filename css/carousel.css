@@ -1,0 +1,28 @@
+#carousel {
+  height:168px;
+  width:300px;
+  overflow:hidden;
+  position:relative;
+}
+
+img {
+  display:inline-block;
+}
+
+#right {
+  top:69px;
+  left:270px;
+  position:absolute;
+  height:30px;
+  width:30px;
+  border-radius:30px;
+}
+
+#left{
+  top:69px;
+  position:absolute;
+  /*float:left;*/
+  height:30px;
+  width:30px;
+  border-radius:30px;
+}
