@@ -7,6 +7,8 @@
 
 .image {
   display:inline-block;
+  right:0px;
+  left:0px;
 }
 
 #right {

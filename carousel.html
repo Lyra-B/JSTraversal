@@ -20,35 +20,32 @@
     this.images = document.getElementsByClassName("image");
     this.right = document.getElementById("right");
     this.left = document.getElementById("left");
+    var _this = this
 
-    this.right.onclick = function() {
-      alert("right");
+    _this.right.onclick = function() {
+      for (i=0; i<_this.images.length; i++) {
+        var num = _this.images[i].getAttribute("left")
+        var new_num = num+360;
+        _this.images[i].setAttribute("left", new_num+"px")
+        if (new_num>=900){break};
+      }
+      // alert("right");
     };
 
-    this.left.onclick = function() {
-      alert("left")
+    _this.left.onclick = function() {
+      for (i=0; i<_this.images.length; i++) {
+        var num = _this.images[i].getAttribute("right")
+        var new_num = num-360;
+        _this.images[i].setAttribute("right", "new_num"+"px")
+        if (new_num <= -900){break};
+      }
+      //alert("left")
     };
   }
 
   var carousel = new Carousel();
-
-  // function getPosition(direction) {
-  //   direction.onclick{
-  //     if (direction == this.right) {
-
-  //     }
-  //     else if (direction == this.left) {
-
-  //     }
-  //   }
-  // }
-
-
-
-  // var carousel = new Carousel();
-  //carousel.right.onclick(){carousel.getPosition(right)}
-  //carousel.left.onclick(){carousel.getPosition(right)}
-  // carousel.getPosition()
+  carousel.right.onclick();
+  carousel.left.onclick();
 
   </script>
 
