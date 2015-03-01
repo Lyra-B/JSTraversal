@@ -1,23 +1,42 @@
 #carousel {
-  height:168px;
+/*  height:168px;
   width:300px;
   overflow:hidden;
-  position:relative;
+  position:relative;*/
+
 }
 
-.image {
-  display:inline-block;
-  right:0px;
-  left:0px;
+#one {
+/*  position:absolute;
+  display:block;
+  top:0px;
+  /*bottom:336px;*/*/
+}
+
+.images {
+/*  top:0px;*/
+}
+
+#two {
+/*  position:absolute;
+  display:block;
+  top:168px;*/
+}
+
+#three {
+/*  position:absolute;
+  display:block;
+  top:336px;*/
 }
 
 #right {
   top:69px;
   left:270px;
-  position:absolute;
+  position:absolute;*/
   height:30px;
   width:30px;
   border-radius:30px;
+  z-index:1;
 }
 
 #left{
@@ -26,4 +45,5 @@
   height:30px;
   width:30px;
   border-radius:30px;
+  z-index:1;
 }
