@@ -1,37 +1,19 @@
 img {
   float:left;
+  width:300px;
+  height:168px;
 }
 
 #carousel {
-/*  height:168px;*/
   width:300px;
   overflow:hidden;
   position:relative;
 
 }
 
-#one {
-/*  position:absolute;
-  display:block;
-  top:0px;
-  /*bottom:336px;*/
-}
-
 #images {
   position:relative;
   width: 1000000px;
-}
-
-#two {
-/*  position:absolute;
-  display:block;
-  top:168px;*/
-}
-
-#three {
-/*  position:absolute;
-  display:block;
-  top:336px;*/
 }
 
 #right {
