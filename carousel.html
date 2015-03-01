@@ -17,44 +17,34 @@
       <img id="three" src="carousel_images/london3.jpeg", alt ="Eye of London"/>
     </div>
   </div>
-  // <script type="text/javascript">
+  <script type="text/javascript">
   function Carousel() {
     this.images = document.getElementById("images");
     this.right = document.getElementById("right");
     this.left = document.getElementById("left");
     var _this = this
-    var position = 300;
+    var num = 0;
 
     this.right.onclick = function() {
-  //     // for (i=0; i<_this.images.length; i++) {
-  //       //var num = _this.images.getAttribute("top");
-  //       //var num = _this.images[i].style.top;
-  //       //for some reason getAttribute doesn't work here, so I will use window.getComputedStyle(element) inspired by here: "http://stackoverflow.com/questions/6338217/get-a-css-value-with-javascript"
-  //       // var style = window.getComputedStyle(_this.images);
-  //       // var num = style.getPropertyValue('top');
-  //       // var new_num = parseInt(num.replace("px",""))-168;
-  //       // _this.images.setAttribute("left", -300+"px");
-  //       // if (_this.images[i].style.top < -337){break};
-    _this.images.style.right = position + "px";
-  //     // }
-   };
+      if ( num === 600 ) {
+        num = 0;
+      } else {
+        num += 300;
+      }
+      _this.images.style.right = num + "px";
+    };
 
     this.left.onclick = function() {
-        // for (i=0; i<_this.images.length; i++) {
-          // var num = _this.images.style.top;
-          //var num = _this.images[i].getAttribute("top");
-          // var style = window.getComputedStyle(_this.images);
-          // var num = style.getPropertyValue('top');
-          // var new_num = parseInt(num.replace("px",""))+168;
-          // _this.images.setAttribute("top", new_num+"px");
-          // if (_this.images[i].style.top > 337){break};
-        // }
+      if ( num > 0 ) {
+        num -= 300;
+      } else {
+        num += 600;
+      }
+      _this.images.style.right = num + "px";
     };
   }
 
   new Carousel();
-  // // carousel.right.onclick();
-  // // carousel.left.onclick();
 
   </script>
 

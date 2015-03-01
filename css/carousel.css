@@ -1,8 +1,12 @@
+img {
+  float:left;
+}
+
 #carousel {
-/*  height:168px;
+/*  height:168px;*/
   width:300px;
   overflow:hidden;
-  position:relative;*/
+  position:relative;
 
 }
 
@@ -10,11 +14,12 @@
 /*  position:absolute;
   display:block;
   top:0px;
-  /*bottom:336px;*/*/
+  /*bottom:336px;*/
 }
 
-.images {
-/*  top:0px;*/
+#images {
+  position:relative;
+  width: 1000000px;
 }
 
 #two {
@@ -32,7 +37,7 @@
 #right {
   top:69px;
   left:270px;
-  position:absolute;*/
+  position:absolute;
   height:30px;
   width:30px;
   border-radius:30px;
